@@ -1,5 +1,7 @@
 "use client";
 import { Button, Checkbox, Input } from "@material-tailwind/react";
+import Link from "next/link";
+import PrimaryBtn from "../../components/primary-btn";
 
 export default function Form() {
   return (
@@ -22,7 +24,9 @@ export default function Form() {
           className='checked:bg-primary checked:border-primary rounded-none border-2'
           label='Remember Me'
         />
-        <Button className='bg-primary rounded-none px-8'>Sign Up</Button>
+        <Link href={"/platform"}>
+          <PrimaryBtn>Sign Up</PrimaryBtn>
+        </Link>
       </div>
     </section>
   );

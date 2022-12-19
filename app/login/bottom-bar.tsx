@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BottomBar() {
   return (
-    <section className='grid grid-cols-3 justify-between justify-items-center gap-16 my-20'>
+    <section className='grid grid-cols-3 justify-between justify-items-center gap-16 my-32'>
       {images.map((_) => (
         <div className='flex flex-col items-center px-8' key={_.title}>
           <Image src={_.img} alt='' width={90} height={90} className='' />
