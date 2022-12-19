@@ -16,15 +16,15 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <head />
-      <body>
-        <ThemeProvider>
-          <div className={`max-w-[1137px] mx-auto ${inter.className}`}>
+      <ThemeProvider>
+        <body className='flex flex-col [&>*]:w-full min-h-screen'>
+          <div className={`max-w-[1137px] mx-auto ${inter.className} grow`}>
             <Navbar />
             {children}
           </div>
           <Footer />
-        </ThemeProvider>
-      </body>
+        </body>
+      </ThemeProvider>
     </html>
   );
 }
