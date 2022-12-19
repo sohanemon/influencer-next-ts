@@ -24,7 +24,7 @@ export default function Form() {
           className='checked:bg-primary checked:border-primary rounded-none border-2'
           label='Remember Me'
         />
-        <Link href={"/platform"}>
+        <Link href={"/setup/platform"}>
           <PrimaryBtn>Sign Up</PrimaryBtn>
         </Link>
       </div>

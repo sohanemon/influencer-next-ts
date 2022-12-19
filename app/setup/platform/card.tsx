@@ -6,9 +6,22 @@ export default function Card() {
       {platforms.map((_) => (
         <button
           key={_.title}
-          className='border rounded-3xl border-secondary p-3 flex flex-col items-center py-5 hover:shadow-lg'
+          className='border rounded-3xl border-secondary p-3 flex flex-col items-center py-5 hover:shadow-lg relative  transition-all group'
         >
-          <Image src={_.img} alt='' width={45} height={45} className='' />
+          <Image
+            src={require("../../../assets/platform/tick.png")}
+            alt=''
+            width={40}
+            height={40}
+            className='absolute right-3 top-3'
+          />
+          <Image
+            src={_.img}
+            alt=''
+            width={45}
+            height={45}
+            // className='object-cover group-active:scale-[1.01]'
+          />
           <p className='font-bold text-secondary mt-2 mb-3'>{_.title} </p>
           <p className='text-center text-gray-600'>{_.details}</p>
         </button>
@@ -19,23 +32,23 @@ export default function Card() {
 
 const platforms = [
   {
-    img: require("../../assets/platform/facebook.png"),
+    img: require("../../../assets/platform/facebook.png"),
     title: "Facebook",
     details:
       "Social networking site, connect and share with family and friends online",
   },
   {
-    img: require("../../assets/platform/linkedin.png"),
+    img: require("../../../assets/platform/linkedin.png"),
     title: "LinkedIn",
     details: "World's largest professional network on the internet",
   },
   {
-    img: require("../../assets/platform/twitter.png"),
+    img: require("../../../assets/platform/twitter.png"),
     title: "Twitter",
     details: "Stay connected through the exchange of quick, frequent messages",
   },
   {
-    img: require("../../assets/platform/whatsapp.png"),
+    img: require("../../../assets/platform/whatsapp.png"),
     title: "Whatsapp",
     details: "Take control over your community, content and data",
   },
