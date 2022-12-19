@@ -2,4 +2,5 @@
 
 ### Tech Stack
 
-- next@canary , new appDir, turboPack beta
+- NextJS 13 , new appDir, turboPack beta
+  > to use next experimental, run `yarn add next@canary`

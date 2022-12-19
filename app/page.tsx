@@ -1,10 +1,13 @@
 "use client";
-import { Button } from "@material-tailwind/react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
-  return (
-    <div>
-      <Button>Button</Button>
-    </div>
-  );
+  const router = useRouter();
+  console.log(router);
+  const user = {
+    uid: 0,
+  };
+
+  if (user?.uid) router.push("/home");
+  else router.push("/login");
 }
