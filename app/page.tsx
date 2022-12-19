@@ -10,4 +10,9 @@ export default function Home() {
 
   if (user?.uid) router.push("/home");
   else router.push("/login");
+  return (
+    <div>
+      <p className='text7xl'>Loading</p>{" "}
+    </div>
+  );
 }
