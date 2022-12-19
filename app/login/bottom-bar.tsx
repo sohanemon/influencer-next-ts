@@ -21,13 +21,13 @@ const images = [
     details: "Your LinkedIn, Facebook, Tweeter post available in one platform",
   },
   {
-    img: require("../../assets/login/icons (1).png"),
-    title: "Single platform",
-    details: "Your LinkedIn, Facebook, Tweeter post available in one platform",
+    img: require("../../assets/login/icons (2).png"),
+    title: "Boost engagement",
+    details: "Use Live streaming, push notifications and messaging.",
   },
   {
-    img: require("../../assets/login/icons (1).png"),
-    title: "Single platform",
-    details: "Your LinkedIn, Facebook, Tweeter post available in one platform",
+    img: require("../../assets/login/icons (3).png"),
+    title: "Gain total control",
+    details: "Take control over your community, content and data",
   },
 ];
