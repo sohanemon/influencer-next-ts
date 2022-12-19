@@ -4,7 +4,7 @@ export default function BottomBar() {
   return (
     <section className='grid grid-cols-3 justify-between justify-items-center gap-16 my-20'>
       {images.map((_) => (
-        <div className='flex flex-col items-center' key={_.title}>
+        <div className='flex flex-col items-center px-8' key={_.title}>
           <Image src={_.img} alt='' width={90} height={90} className='' />
           <p className='font-extrabold text-secondary mt-3 mb-4'>{_.title}</p>
           <p className='text-center text-gray-600'>{_.details}</p>

@@ -3,6 +3,7 @@ import { ThemeProvider } from "@material-tailwind/react";
 import "./globals.css";
 import Navbar from "./navbar";
 import { Inter } from "@next/font/google";
+import Footer from "./footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function RootLayout({
             <Navbar />
             {children}
           </div>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
