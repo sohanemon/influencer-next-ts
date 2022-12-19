@@ -11,7 +11,7 @@ export default function Navbar() {
         </p>
       </div>
       <div>
-        <Image src={user} alt='user' width={37} height={37} className='' />
+        <Image src={user} alt='user' width={32} height={32} className='' />
       </div>
     </section>
   );

@@ -2,7 +2,11 @@
 import { ThemeProvider } from "@material-tailwind/react";
 import "./globals.css";
 import Navbar from "./navbar";
+import { Inter } from "@next/font/google";
 
+const inter = Inter({
+  subsets: ["latin"],
+});
 export default function RootLayout({
   children,
 }: {
@@ -13,7 +17,7 @@ export default function RootLayout({
       <head />
       <body>
         <ThemeProvider>
-          <div className='max-w-[1137px] mx-auto'>
+          <div className={`max-w-[1137px] mx-auto ${inter.className}`}>
             <Navbar />
             {children}
           </div>
