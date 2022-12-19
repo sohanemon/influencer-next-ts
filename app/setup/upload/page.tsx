@@ -1,5 +1,6 @@
 "use client";
 import Stepper from "../../../components/stepper";
+import Uploader from "./uploader";
 import { Button } from "@material-tailwind/react";
 export default function Page() {
   return (
@@ -14,6 +15,7 @@ export default function Page() {
       >
         Download sample
       </Button>
+      <Uploader />
     </section>
   );
 }
