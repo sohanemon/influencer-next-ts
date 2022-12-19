@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body
+  > div
+  > section.flex.mt-6.gap-5
+  > div.grow
+  > section
+  > div.flex.justify-between.items-center
+  > div
+  > label.relative.flex.items-center.cursor-pointer.p-3.rounded-full {
+  padding: 0 !important;
+  margin-right: 10px;
+}
