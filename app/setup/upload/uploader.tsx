@@ -1,9 +1,20 @@
 "use client";
 import Image from "next/image";
-import React, { useCallback } from "react";
+import { useRouter } from "next/navigation";
+import React, { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import PrimaryBtn from "../../../components/primary-btn";
 export default function Uploader() {
+  const [dropped, setDropped] = useState(false);
+  const router = useRouter();
+  useEffect(() => {
+    if (dropped) {
+      router.push("/setup/template");
+    }
+
+    return () => {};
+  }, [dropped, router]);
+
   const onDrop = useCallback((acceptedFiles: File[]) => {
     acceptedFiles.forEach((file) => {
       const reader = new FileReader();
@@ -11,10 +22,9 @@ export default function Uploader() {
       reader.onabort = () => console.log("file reading was aborted");
       reader.onerror = () => console.log("file reading has failed");
       reader.onload = () => {
-        // Do whatever you want with the file contents
         const binaryStr = reader.result;
         console.log("dropped ");
-        console.log(binaryStr);
+        setDropped(true);
       };
       reader.readAsArrayBuffer(file);
     });

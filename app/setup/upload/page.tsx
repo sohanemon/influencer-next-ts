@@ -1,7 +1,9 @@
 "use client";
 import Stepper from "../../../components/stepper";
 import Uploader from "./uploader";
+import Link from "next/link";
 import { Button } from "@material-tailwind/react";
+import ArrowBtn from "../../../components/arrow-btn";
 export default function Page() {
   return (
     <section>
@@ -16,6 +18,9 @@ export default function Page() {
         Download sample
       </Button>
       <Uploader />
+      <Link href='/setup/template' className='block ml-auto w-max mt-24'>
+        <ArrowBtn />
+      </Link>
     </section>
   );
 }
