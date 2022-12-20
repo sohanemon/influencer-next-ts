@@ -9,8 +9,6 @@ export default function Page() {
     <section>
       <Stepper title='Upload your data ' step='1' />
       <Button
-        size='sm'
-        ripple={true}
         variant='text'
         color='deep-orange'
         className='text-base p-0 hover:bg-transparent text-primary active:bg-transparent my-5 capitalize font-normal '
