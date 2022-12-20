@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { router } from "next/client";
 import React, { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import PrimaryBtn from "../../../components/primary-btn";
 export default function Uploader() {
   const [dropped, setDropped] = useState(false);
-  const router = useRouter();
+  // const router = useRouter();
   useEffect(() => {
     if (dropped) {
       router.push("/setup/template");
