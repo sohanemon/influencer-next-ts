@@ -20,10 +20,10 @@ export default function Page() {
         <BsArrowLeft /> Back to step 1
       </Link>
       <Stepper step='2' title='Template Selection' />
-      <div className='flex items-center gap-3 my-5'>
+      <button className='flex items-center gap-3 my-5'>
         <Image src={cloud} alt='' className='' />
         <p className='text-primary'>Your uploaded document</p>
-      </div>
+      </button>
 
       {/* card section */}
       <section className='grid grid-cols-4 mt-16'>
