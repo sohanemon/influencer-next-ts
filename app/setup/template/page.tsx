@@ -22,6 +22,7 @@ export default function Page() {
         <Image src={cloud} alt='' className='' />
         <p className='text-primary'>Your uploaded document</p>
       </div>
+
       {/* card section */}
       <section className='grid grid-cols-4'>
         {images.map((_) => (

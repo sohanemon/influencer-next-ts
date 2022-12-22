@@ -5,7 +5,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import PrimaryBtn from "../../../components/primary-btn";
 import cloud from "../../../assets/upload/cloud.png";
-export default function Uploader() {
+export default function Uploader({ setBlobLink }) {
   const router = useRouter();
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
@@ -36,7 +36,32 @@ export default function Uploader() {
       </p>
     );
   });
+  const handleDownload = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.stopPropagation();
+    const fr = new FileReader();
+    fr.readAsDataURL(acceptedFiles[0]);
 
+    var blob = new Blob([acceptedFiles[0]], { type: "application/pdf" });
+
+    var objectURL = window.URL.createObjectURL(blob);
+    console.log(objectURL);
+
+    /* ------------------- creating the link for download ------------------ */
+    const link = document.createElement("a");
+    link.href = objectURL;
+    link.download = "file se.png";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  };
+
+  const download = (
+    <div>
+      <button onClick={(e) => handleDownload(e)}>Download</button>
+    </div>
+  );
   return (
     <div
       {...getRootProps()}
@@ -57,6 +82,7 @@ export default function Uploader() {
             </div>
           </div>
           {files}
+          {download}
         </div>
       )}
     </div>
