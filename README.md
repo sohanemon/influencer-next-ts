@@ -1,5 +1,4 @@
 # Influencer-next-ts
-
 ### Tech Stack
 
 - NextJS 13 , new appDir, turboPack beta
