@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Loader from "../components/loader";
 export default function Home() {
   const router = useRouter();
   const user = {
@@ -12,10 +13,10 @@ export default function Home() {
     else router.push("/login");
 
     return () => {};
-  }, [user?.uid]);
+  }, [router, user?.uid]);
   return (
     <div>
-      <p className='text7xl'>Loading</p>{" "}
+      <Loader />
     </div>
   );
 }

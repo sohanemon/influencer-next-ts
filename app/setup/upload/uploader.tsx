@@ -4,16 +4,9 @@ import { useRouter } from "next/navigation";
 import React, { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import PrimaryBtn from "../../../components/primary-btn";
+import cloud from "../../../assets/upload/cloud.png";
 export default function Uploader() {
-  const [dropped, setDropped] = useState(false);
   const router = useRouter();
-  // useEffect(() => {
-  //   if (dropped) {
-  //     router.push("/setup/template");
-  //   }
-
-  //   return () => {};
-  // }, [dropped, router]);
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     acceptedFiles.forEach((file) => {
@@ -29,8 +22,19 @@ export default function Uploader() {
       reader.readAsArrayBuffer(file);
     });
   }, []);
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
-    onDrop,
+  const { acceptedFiles, getRootProps, getInputProps, isDragActive } =
+    useDropzone({
+      onDrop,
+    });
+  const files = acceptedFiles.map((file) => {
+    console.log(file);
+    return (
+      // @ts-ignore
+      <p key={file.path}>
+        {/* @ts-ignore */}
+        {file.path} - {file.size} bytes
+      </p>
+    );
   });
 
   return (
@@ -43,11 +47,7 @@ export default function Uploader() {
         <p className='text-center'>Drop the files here ...</p>
       ) : (
         <div className='gap-2 flex flex-col [&>*]:w-max '>
-          <Image
-            src={require("../../../assets/upload/cloud.png")}
-            alt=''
-            className='ml-2'
-          />
+          <Image src={cloud} alt='' className='ml-2' />
 
           <p className='text-secondary'>Drag & Drop to Upload File</p>
           <div className='gap-2 flex flex-col items-center'>
@@ -56,6 +56,7 @@ export default function Uploader() {
               <PrimaryBtn>Browse File</PrimaryBtn>
             </div>
           </div>
+          {files}
         </div>
       )}
     </div>
