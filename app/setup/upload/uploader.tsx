@@ -5,7 +5,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import { useDropzone } from "react-dropzone";
 import PrimaryBtn from "../../../components/primary-btn";
 import cloud from "../../../assets/upload/cloud.png";
-export default function Uploader({ setBlobLink }) {
+export default function Uploader({}) {
   const router = useRouter();
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
@@ -43,7 +43,7 @@ export default function Uploader({ setBlobLink }) {
     const fr = new FileReader();
     fr.readAsDataURL(acceptedFiles[0]);
 
-    var blob = new Blob([acceptedFiles[0]], { type: "application/pdf" });
+    var blob = new Blob([acceptedFiles[0]]);
 
     var objectURL = window.URL.createObjectURL(blob);
     console.log(objectURL);
