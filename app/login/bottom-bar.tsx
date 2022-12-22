@@ -1,5 +1,7 @@
 import Image from "next/image";
-
+import img1 from "../../assets/login/icons (1).png";
+import img2 from "../../assets/login/icons (2).png";
+import img3 from "../../assets/login/icons (3).png";
 export default function BottomBar() {
   return (
     <section className='grid grid-cols-3 justify-between justify-items-center gap-16 my-32'>
@@ -16,17 +18,17 @@ export default function BottomBar() {
 
 const images = [
   {
-    img: require("../../assets/login/icons (1).png"),
+    img: img1,
     title: "Single platform",
     details: "Your LinkedIn, Facebook, Tweeter post available in one platform",
   },
   {
-    img: require("../../assets/login/icons (2).png"),
+    img: img2,
     title: "Boost engagement",
     details: "Use Live streaming, push notifications and messaging.",
   },
   {
-    img: require("../../assets/login/icons (3).png"),
+    img: img3,
     title: "Gain total control",
     details: "Take control over your community, content and data",
   },
