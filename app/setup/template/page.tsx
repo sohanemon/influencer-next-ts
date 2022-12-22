@@ -1,3 +1,4 @@
+"use client";
 import Stepper from "../../../components/stepper";
 import Link from "next/link";
 import { BsArrowLeft } from "react-icons/bs";
@@ -5,6 +6,7 @@ import cloud from "../../../assets/template/cloud.png";
 import Image from "next/image";
 import meetingImg from "../../../assets/template/Template (1).png";
 import birthdayImg from "../../../assets/template/Template (2).png";
+import ArrowBtn from "../../../components/arrow-btn";
 import joiningImg from "../../../assets/template/Template (3).png";
 import festivalImg from "../../../assets/template/Template (4).png";
 
@@ -24,15 +26,22 @@ export default function Page() {
       </div>
 
       {/* card section */}
-      <section className='grid grid-cols-4'>
+      <section className='grid grid-cols-4 mt-16'>
         {images.map((_) => (
           <div key={_.title} className='w-48'>
             <p className='text-xs font-medium'>{_.title}</p>
-            <Image src={_.image} alt='' className='' />
-            <p className='text-xs text-secondary'>{_.details}</p>
+            <Image
+              src={_.image}
+              alt=''
+              className='hover:scale-[1.02] transition-all duration-200'
+            />
+            <p className='text-xs text-secondary mt-1'>{_.details}</p>
           </div>
         ))}
       </section>
+      <Link href='/setup/template' className='block ml-auto w-max mt-24'>
+        <ArrowBtn finish />
+      </Link>
     </>
   );
 }
