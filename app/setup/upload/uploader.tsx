@@ -7,13 +7,13 @@ import PrimaryBtn from "../../../components/primary-btn";
 export default function Uploader() {
   const [dropped, setDropped] = useState(false);
   const router = useRouter();
-  useEffect(() => {
-    if (dropped) {
-      router.push("/setup/template");
-    }
+  // useEffect(() => {
+  //   if (dropped) {
+  //     router.push("/setup/template");
+  //   }
 
-    return () => {};
-  }, [dropped, router]);
+  //   return () => {};
+  // }, [dropped, router]);
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     acceptedFiles.forEach((file) => {
@@ -24,7 +24,7 @@ export default function Uploader() {
       reader.onload = () => {
         const binaryStr = reader.result;
         console.log("dropped ");
-        setDropped(true);
+        // setDropped(true);
       };
       reader.readAsArrayBuffer(file);
     });
