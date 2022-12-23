@@ -3,12 +3,19 @@ import { createSlice } from "@reduxjs/toolkit";
 export const socialSlice = createSlice({
   name: "social",
   reducers: {
-    count: (state) => {
-      return state + 1;
+    toggleSocial: (state, { payload }) => {
+      //@ts-ignore
+      if (!state[payload]) return { ...state, [payload]: true };
+      else return { ...state, [payload]: false };
     },
   },
-  initialState: 5,
+  initialState: {
+    facebook: false,
+    twitter: false,
+    linkedIn: false,
+    whatsapp: false,
+  },
 });
 
-export const { count } = socialSlice.actions;
+export const { toggleSocial } = socialSlice.actions;
 export default socialSlice.reducer;

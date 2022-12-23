@@ -7,7 +7,6 @@ export default function Home() {
   const user = {
     uid: 0,
   };
-
   useEffect(() => {
     if (user?.uid) router.push("/home");
     else router.push("/login");
