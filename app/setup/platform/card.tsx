@@ -1,5 +1,6 @@
 import Image from "next/image";
 import tick from "../../../assets/platform/tick.png";
+
 import img1 from "../../../assets/platform/facebook.png";
 import img2 from "../../../assets/platform/linkedin.png";
 import img3 from "../../../assets/platform/twitter.png";

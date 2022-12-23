@@ -2,11 +2,17 @@ import Image from "next/image";
 import { socialIcons } from "../rights-side";
 import man from "../../../assets/template/man.png";
 import manInCard from "../../../assets/template/manInCard.png";
+import tick from "../../../assets/platform/tick.png";
 export default function Template() {
   return (
     <>
-      <div className='bg-red-100 rounded-lg max-w-screen-md min-h-[200px] block mx-auto mt-2 p-10'>
-        <p className='text-xl font-medium text-secondary'>Work Anniversary</p>
+      <div className='bg-red-100 rounded-lg max-w-screen-md min-h-[200px] block mx-auto mt-2 p-10 pt-2'>
+        <div className='mb-5 flex justify-between items-center'>
+          <p className=' font-semibold tracking-wide text-secondary'>
+            Work Anniversary
+          </p>
+          <Image className='translate-x-8' src={tick} alt='' />
+        </div>
         <main className='grid grid-cols-12'>
           <Image className='rounded-lg col-span-3' alt='' src={man} />
           <div
