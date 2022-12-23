@@ -2,7 +2,12 @@
 
 ### Tech Stack
 
-![react](/assets//readme//react-js-icon.svg)
+<img src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/react-js-icon.svg' width='100px'/>
+<img src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/nextjs-icon.svg' width='100px'/>
+<img src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/redux-icon.svg' width='100px'/>
+<img src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/tailwind-css-icon.svg' width='100px'/>
+<img src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/typescript-programming-language-icon.svg' width='100px'/>
+<img src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/vercel-icon.svg' width='100px'/>
 
 - NextJS 13 , new appDir, turboPack beta
 
