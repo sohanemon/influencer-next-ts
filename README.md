@@ -5,7 +5,7 @@
 <br>
 <div align='center' style='display: flex; width: 100%; justify-content: between;'>
 <img style='padding: 4px;' src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/react-js-icon.svg' width='50px'/>
-<img style='padding: 4px;' src='/assets/readme/nextjs-icon.png' width='50px'/>
+<img style='padding: 4px;' src='/assets/readme/nextjs.png' width='50px'/>
 <img style='padding: 4px;' src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/redux-icon.svg' width='50px'/>
 <img style='padding: 4px;' src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/tailwind-css-icon.svg' width='50px'/>
 <img style='padding: 4px;' src='https://raw.githubusercontent.com/sohanemon/influencer-next-ts/64ec72e60562fab8ba7cbe21409647fb6664baee/assets/readme/typescript-programming-language-icon.svg' width='50px'/>
