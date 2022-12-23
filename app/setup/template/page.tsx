@@ -6,17 +6,19 @@ import { BsArrowLeft } from "react-icons/bs";
 import cloud from "../../../assets/template/cloud.png";
 import Image from "next/image";
 import meetingImg from "../../../assets/template/Template (1).png";
+import { open } from "../../../slices/modal-slice";
 import birthdayImg from "../../../assets/template/Template (2).png";
 import ArrowBtn from "../../../components/arrow-btn";
 import joiningImg from "../../../assets/template/Template (3).png";
 import festivalImg from "../../../assets/template/Template (4).png";
 import { useSelector, useDispatch } from "react-redux";
+import Modal from "../../../components/modal";
 
 export default function Page() {
-  const county = useSelector((state: RootState) => state.social);
+  const modal = useSelector((state: RootState) => state.modal);
   const dispatch = useDispatch();
   return (
-    <>
+    <div className='relative '>
       <Link
         href='/setup/upload'
         className='mb-5 inline-flex items-center gap-2 hover:text-primary text-secondary'
@@ -43,10 +45,15 @@ export default function Page() {
           </div>
         ))}
       </section>
-      <Link href='/setup/template' className='block ml-auto w-max mt-24'>
+      <div
+        className='block ml-auto w-max mt-24'
+        onClick={() => dispatch(open())}
+      >
         <ArrowBtn finish />
-      </Link>
-    </>
+      </div>
+      {/* </Link> */}
+      {modal && <Modal />}
+    </div>
   );
 }
 

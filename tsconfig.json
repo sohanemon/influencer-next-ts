@@ -25,7 +25,9 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/setup/platform/page.tsx"
+    "app/setup/platform/page.tsx",
+    "app/setup/template/page.jsx",
+    "app/home/page.tsx"
   ],
   "exclude": ["node_modules"]
 }

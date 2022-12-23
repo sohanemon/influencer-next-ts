@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const socialSlice = createSlice({
+const socialSlice = createSlice({
   name: "social",
   reducers: {
     toggleSocial: (state, { payload }) => {
